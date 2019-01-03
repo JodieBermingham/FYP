@@ -13,6 +13,14 @@
 \usepackage[table]{xcolor}
 \hypersetup{urlcolor=black, colorlinks=true}  % Colours hyperlinks in black, can be distracting if there are many links and colored blue.
 \usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage[utf8]{inputenc}
+\usepackage[export]{adjustbox}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\setlength{\arrayrulewidth}{1mm}
+\setlength{\tabcolsep}{18pt}
 \graphicspath{{Figures/}}  % Location of the graphics files (set up for graphics to be in PDF format)
 
 %% ----------------------------------------------------------------
@@ -20,8 +28,8 @@
 \frontmatter      % Begin Roman style (i, ii, iii, iv...) page numbering
 
 % Set up the Title Page
-\title  {Your Thesis Title}
-\authors  {Your Name}
+\title  {Edge/Fog Computing - Containerization on Single Board Computers }
+\authors  {Jodie Bermingham}
             
 \addresses  {\groupname\\\deptname\\\univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
 \date       {\today}
@@ -46,7 +54,7 @@
 
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 
-I, Myname , declare that this thesis titled, `THESIS TITLE' and the work presented in it are my own. I confirm that:
+I, Jodie Bermingham , declare that this thesis titled, 'Migrating Micro-Services between Single Board Computers using Containerization' and the work presented in it are my own. I confirm that:
 
 \begin{itemize} 
 \item[\tiny{$\blacksquare$}] This work was done wholly or mainly while in candidature for an undergraduate degree at Cork Institute of Technology.
@@ -70,6 +78,7 @@ Signed:\\
 Date:\\
 \rule[1em]{25em}{0.5pt}  % This prints a line to write the date
 }
+
 \clearpage  % Declaration ended, now start a new page
 
 %% ----------------------------------------------------------------
@@ -121,7 +130,12 @@ The acknowledgements and the people to thank go here, don't forget to include yo
 {
 % \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
 \textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
-
+\textbf{IOT} & \textbf{I}nternet \textbf{O}f \textbf{T}hings \\
+\textbf{SBC} & \textbf{S}ingle \textbf{B}oard \textbf{C}omputers \\
+\textbf{CIT} & \textbf{C}ork \textbf{I}nstitute of \textbf{T}echnology \\
+\textbf{IaaS} & \textbf{I}nfrastructure \textbf{a}s \textbf{a} \textbf{S}ervice \\
+\textbf{PaaS} & \textbf{P}latform \textbf{a}s \textbf{a} \textbf{S}ervice \\
+\textbf{SaaS} & \textbf{S}oftware \textbf{a}s \textbf{a} \textbf{S}ervice \\
 }
 
 %% ----------------------------------------------------------------

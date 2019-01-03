@@ -1,41 +1,61 @@
-\chapter{Problem - rename to project title}
+
+\chapter{Problem - Migrating Micro-Services between Single Board Computers using 
+Containerization }
 \label{chap:problem}
 \lhead{\emph{Problem Statement}}
-The key question to be addressed in this chapter is: "What do I want to achieve".
-
-This chapter should comprise around 1500 words and describe the problem you are trying to solve. Try to be as specific here as you can, this will help you to anticipate possible risks such as lack of support from APIs.
+%The key question to be addressed in this chapter is: "What do I want to achieve".
+%This chapter should comprise around 1500 words and describe the problem you are trying to solve. Try to be as specific here as you can, this will help you to anticipate possible risks such as lack of support from APIs.
 
 \section{Problem Definition}
-Describe the problem you are trying to solve in this project. There will sometimes be a need at some point during the report to display an equation that may be core to your project. For example if the project is on gait detection what equation are you using to determine gait? If the project is on localization what is the method/formula? The formatting of these is reliably done in Latex also as we can see in equation \ref{eq:Legrange}.
+While progressing through this project, I am going to be delving into all aspects of containerization, single board computers, edge/fog computing and migration. As already established, the idea for this particular project is to investigate if micro-services can be migrated between single board computers using containers. Containers are widely used in many aspects of computing, but, there are very little studies on containers being placed on single board computers. Because there is very little regarding this topic, I decided to take it upon myself to investigate such aspect. By placing containers on single board computers, and proceeding to try migrate some micro-services between two single board computers. As previously discussed, the aim of containers is to allow software and/or applications to run on any compute system. This is necessary for many reasons. One main constraint developers face when designing new applications and services involves the physical compute system they are lying on. Different brands of devices have a variety of specifications which need to be met by these developers. Containers provide an additional platform layer between the operating system of a device and the applications which usually would be situated on-top. Having this additional layer is what allows any applications to run on the operating system. For example, if an application was developed for a Mac iOS device, it would have the underlying API's which are specifically designed for a Mac operating system, preventing this application to run on a windows device. To prevent this from occurring, a container could be placed on the windows machine, allowing the application to run exactly as it would on an Apple Mac device. 
 
-\begin{equation}
-\frac{d}{dt}(\frac{\partial L}{\partial \dot{c_i}})-\frac{\partial L}{\partial c_i}+\frac{\partial P}{\partial \dot{c_i}} = F_i,
-\label{eq:Legrange}
-\end{equation}
+%Describe the problem you are trying to solve in this project. There will sometimes be a need at some point during the report to display an equation that may be core to your project. For example if the project is on gait detection what equation are you using to determine gait? If the project is on localization what is the method/formula? The formatting of these is reliably done in Latex also as we can see in equation \ref{eq:Legrange}.
 
 
 \section{Objectives}
-Enumerate the objectives you want to achieve in your project. Again as this is an early stage these will tend to change but there should be a rational explanation for this change. Always document your work, keep a lab book during the term that you only use for FYP!
+The main objective of this project is to migrate micro-services between two Raspberry Pi's. Managing micro-services requires a specialized program which will lie on the container. The management application provides a level of orchestration for these micro-services. Kubernetes is the orchestration tool which will be used for this project. Kubernetes prides itself in being an open-source orchestration tool for containers. The reason which Kubernetes is used when managing containers falls under the issue of connecting these containers to the outside world. Kubernetes provides scheduling, load balancing and distribution which are essential elements in any device. Kubernetes aims to ensure containers run exactly how a user intends. While all of this occurs, I will be investigating if this type of architecture falls under the category of edge or fog computing. The main reasoning behind this is to investigate whether single board computers and containers can be used in a fog environment and how beneficial it may be. 
+%Enumerate the objectives you want to achieve in your project. Again as this is an early stage these will tend to change but there should be a rational explanation for this change. Always document your work, keep a lab book during the term that you only use for FYP!
 
-\section{Functional Requirements}
-Enumerate the functional requirements you want your project to have. 
+\section{ Requirements}
+For this project to be achieved, there are many requirements which are essential. These are as follows:
 
-Please, do not include the use cases here. If you want to create a one-to-one mapping between functional requirements and use cases (which does not necessarily need to be the case, indeed most likely this will not be the case) do it elsewhere. Here should purely describe what do you want to do. In no case should you use this section to provide a description of how to implement them, that is for later. For people doing projects that are not heavy implementation projects (e.g. deploying an architecture or testing a novel tool in specific conditions) this structure can still be used as it will force you to think about what you plan to achieve and what possible metrics you may need to measure success.
+\begin{itemize}
+    \item Single Board Computers
+    
+    A Raspberry Pi is a requirement for this assignment this is where the functionality will be held. For this project to be successful there is a compute system needed. A raspberry Pi is a compute device which is portable, light-weight and affordable and can be scalable if necessary.
+    
+    \item Containers
+    
+    As previously discussed, containers allow developers a more functional way to develop and deploy applications. Using containers to host micro-services allows applications to run on any device regardless of the underlying operating system. The container of choice for the project as stated is Docker.
+    
+    \item Container Orchestration Tool
+    
+    With containers, an orchestration tool is needed to ensure they are functioning to their full ability. Kubernetes is an application which provides this level of orchestration which is needed.
+    
+    \item Micro-services
+    
+    Micro-services lie within a container. As mentioned, micro-services are beneficial as they are easily deployed, scalable and work effectively in with containers. 
+    
+\end{itemize}
 
-Let me explain this with more detail. A common mistake is that people confuse the problem description with the solution approach. This is a common mistake by confusing the \emph{what} with the \emph{how}. Here we are purely focused on the what: What is this project about? What are the objectives? What are the functional and non-functional requirements? 
 
-How are we going to do all these things? Well, this is a question for next chapter. Provided a problem, an objective or a functional requirement, obviously there will usually be many ways of doing it, thus there will be many \emph{hows}, but the definition, the \emph{what} we want to achieve will be unique.
+%Enumerate the functional requirements you want your project to have. 
 
-One other display structure you may wish to use at some stage during the report is a figure array. This can also be easily done with Latex and is shown in figure \ref{fig:twosuccesskid}
+%Please, do not include the use cases here. If you want to create a one-to-one mapping between functional requirements and use cases (which does not necessarily need to be the case, indeed most likely this will not be the case) do it elsewhere. Here should purely describe what do you want to do. In no case should you use this section to provide a description of how to implement them, that is for later. For people doing projects that are not heavy implementation projects (e.g. deploying an architecture or testing a novel tool in specific conditions) this structure can still be used as it will force you to think about what you plan to achieve and what possible metrics you may need to measure success.
 
-\begin{figure}
-\centering     %%% not \center
-\subfigure[Figure A]{\label{fig:a}\includegraphics[width=0.48\textwidth]{successkid.jpg}}
-\subfigure[Figure B]{\label{fig:b}\includegraphics[width=0.48\textwidth]{successkid.jpg}}
-\caption{Two Success kids}
-\label{fig:twosuccesskid}
-\end{figure}
+%Let me explain this with more detail. A common mistake is that people confuse the problem description with the solution approach. This is a common mistake by confusing the \emph{what} with the \emph{how}. Here we are purely focused on the what: What is this project about? What are the objectives? What are the functional and non-functional requirements? 
 
-\section{Non-Functional Requirements}
-Enumerate the non-functional requirements you want to achieve in your project (i.e. broadly speaking how your system will operate).
+%How are we going to do all these things? Well, this is a question for next chapter. Provided a problem, an objective or a functional requirement, obviously there will usually be many ways of doing it, thus there will be many \emph{hows}, but the definition, the \emph{what} we want to achieve will be unique.
+
+%One other display structure you may wish to use at some stage during the report is a figure array. This can also be easily done with Latex and is shown in figure \\%ref{fig:twosuccesskid}
+
+%\begin{figure}
+%\centering     %%% not \center
+%\subfigure[Figure A]{\label{fig:a}\includegraphics[width=0.48\textwidth]{successkid.jpg}}
+%\subfigure[Figure B]{\label{fig:b}\includegraphics[width=0.48\textwidth]{successkid.jpg}}
+%\caption{Two Success kids}
+%\label{fig:twosuccesskid}
+%\end{figure}
+
+
 

@@ -145,10 +145,10 @@
 \newcommand*{\FACULTY}[1]{\def\FACNAME{#1}}
 \newcommand*{\subject}[1]{\def\subjectname{#1}}
 \newcommand*{\keywords}[1]{\def\keywordnames{#1}}
-\supervisor  {}
+\supervisor  {Noreen Gubbins}
 \examiner    {}
-\degree      {}
-\authors     {}
+\degree      {IT Management}
+\authors     {Jodie Bermingham}
 \university  {\texorpdfstring{\href{http://www.cit.ie}
                 {Cork Institute of Technology}}
                 {Cork Institute of Technology}}
@@ -195,7 +195,7 @@
       {\LARGE \authornames \par}
       \vfill
       {\large This thesis has been submitted in partial fulfillment for the \par}
-      {\large degree of Bachelor of Science in YOUR DEGREE \par}
+      {\large degree of Bachelor of Science in IT Management \par}
       \bigskip
       \bigskip
       {\large in the \par}

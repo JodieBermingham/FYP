@@ -1,15 +1,53 @@
 \chapter{Introduction}
 \label{chap:intro}
 \lhead{\emph{Introduction}}
-This chapter should comprise around 1000 words and introduces your project. Here you are setting the scene, remember the reader may know nothing about your project at this stage (other than the abstract). N.B. The sections outlined in this document are suggested, some projects will have a greater or lesser emphasis on different sections or may change titles and some will have to add other sections to provide context or detail.
+%This chapter should comprise around 1000 words and introduces your project. Here you are setting the scene, remember the reader may know nothing about your project at this stage (other than the abstract). N.B. The sections outlined in this document are suggested, some projects will have a greater or lesser emphasis on different sections or may change titles and some will have to add other sections to provide context or detail.
 % Putting in comments within the TeX file can be really useful in making notes for yourself and dumping text that you intend to edit later
 
 \section{Motivation}
-Why is it important to do a project on this topic? This should cover your key motivation for this. For example an excellent student from 2016 noticed a large number of homeless sleeping rough in Cork and was motivated to develop a system that load balanced the homeless shelters to try to accommodate the maximum number of homeless. This section can include the personal pronoun but the rest of the report should be third person passive, this is the case with most technical reports! For example here it is fine to say "... I decided to develop and app to help ...".
+Technology is be used by every individual,but in a variety of ways. Having the world at your fingertips is something that attracts many people to the world of Information Technology. Having studied IT for the past 4 years, there are many aspects which I personally find fascinating. These aspects are what I decided to study for this project. Virtualization and cloud computing has changed the way individuals and organizations use their IT resources. Virtualization is referred to as "the act of creating a virtual version of something, including virtual computer hardware platforms." Virtualization and cloud computing is in everything we do, whether we are on a social media platform or remotely dialing in to access our online college notes. Containerization a technology which has been around for a long time but is still quite unknown to many within the technological industry. Throughout this project, I will be taking a deep dive into the world of containerization, micro-services, single-board computers and edge computing. Containerization can be described as an alternative to hypervisor-based virtualization. Meaning, that instead of having a typical hypervisor which enables the applications in the computing infrastructure to become virtual, the operating system instead is virtualized. Micro-services, is a term which refers to the approach that an application is developed and is built. Before micro-services were designed, all applications were developed in a monolithic approach. This approach, contained one huge chunk of code which contained all of the functionality of the application. This was not very effective, as it prevents applications from expanding. Micro-services on the other hand, divides the services within the application into individual applications, which allows for a more agile approach to development and eventually, deployment. Single board computers compromise of a single circuit board with microprocessors, memory, input/output and other desired features which are required of a fully functioning computer. My plan for this project is to use two single board computers, place a container on them along with some sort of micro-services and attempt to migrate between the two. How edge computing comes into this project is in relation to how single board computers are being used. Edge computing is defined as a "paradigm in which computation is largely or completely performed on distributed device nodes known as smart devices or edge devices as opposed to primarily taking place in a centralized cloud environment." \cite{Reference15}
+%\subsection{Benefits of containerization}
+
+
+%Why is it important to do a project on this topic? This should cover your key motivation for this. For example an excellent student from 2016 noticed a large number of homeless sleeping rough in Cork and was motivated to develop a system that load balanced the homeless shelters to try to accommodate the maximum number of homeless. This section can include the personal pronoun but the rest of the report should be third person passive, this is the case with most technical reports! For example here it is fine to say "... I decided to develop and app to help ...".
 
 \section{Contribution}
-Enumerate the main contributions. Here try to zoom out, to talk from the perspective of a Computer Science graduate. In other words, imagine you are talking to a job panel, and you want to show your computer science skills by enumerating how they are reflected in your project work. A good guide here is to look back over the modules you have covered as an undergrad from 2/3rd year, how many tools and techniques from these modules do you have in the project and to what extent? How have you advanced beyond the module content? Do you have anything new?
+Throughout this project, I will research if migrating micro-services between single board computers is possible. My reasoning behind this research is to investigate if deployment of services can be made much quicker and easier with the use of containerization. Currently, developers are restricted when developing applications by code levels, system libraries, system tools and all of the underlying aspects that comes with deploying a new application. Applying micro-services to containers on a single board computer, could prove that containers would improve the over all development of operations, or DevOp's if you will. 
+
+There are many benefits of using containerization:
+
+\begin{itemize}
+\item Software is isolated from its surroundings.
+\item Containers enable software to run regardless of the environment it sits on.
+\item The conflict which would occur between development teams is no longer an issue as any software can be run on the same infrastructure.
+\end{itemize}
+
+Micro-services and containers can work very well together which has been seen in the past with big corporations putting them into play. One company who realized that they needed to be able to scale with ease as their user list was growing at a substantial rate was spotify. Spotify is a global music streaming service with over 75 million active users a month. With this level of traffic and this many people relying on Spotify on a daily/weekly/monthly basis, they quickly realized that scaling out was necessary. This is when they decided to design a micro-service architecture which allowed the possibility of multiple services being down without customers even noticing. With this type of architecture available, and with containers on the rise, I am hoping that this project will show how efficient containerization and micro-services can be.
+
+I will also be taking a deeper look into single board computers, what they are, how I plan to use them and why they are beneficial to this project. Single board computers were made popular because they were cheap and functional computers, but without all of the extra components. They can be used for any purpose and are easily obtained, which is why I decided to use them for this project.
+%Enumerate the main contributions. Here try to zoom out, to talk from the perspective of a Computer Science graduate. In other words, imagine you are talking to a job panel, and you want to show your computer science skills by enumerating how they are reflected in your project work. A good guide here is to look back over the modules you have covered as an undergrad from 2/3rd year, how many tools and techniques from these modules do you have in the project and to what extent? How have you advanced beyond the module content? Do you have anything new?
 
 \section{Structure of This Document}
+The scope of this research project is to derive if it is possible to migrate micro-services between single board computers with the use of containerization. To achieve this, it is important that every aspect of this project is researched and analyzed thoroughly. The document to which you are reading, is divided into five chapters, each chapter taking a different look and approach to the project. These chapters are:
+
+\textit{Chapter 1}
+
+This chapter shows the overview of the project in its entirety. Giving a brief background of the topic and my motives behind choosing this specific area to research. 
+
+\textit{Chapter 2}
+
+Chapter 2 focuses on the area within computer science this project lies. Here, every aspect is defined at a higher level. This is for the benefit of readers who would have no prior knowledge of computer science while outlining all of the major aspects this project entails.
+
+\textit{Chapter 3}
+
+Within chapter 3 I will be outlining what I hope to achieve on completion of this project, while also outlining the problem to which is trying to be solved.
+
+\textit{Chapter 4}
+
+This chapter, chapter 4, will discuss how I plan on implementing this project post research. Here, I will also be explaining how I plan to achieve what was outlined in chapter 3.
+
+\textit{Chapter 5}
+
+Here, every aspect of the project will be concluded. I will synopsis everything which was reviewed in the entire project.  
 % notice how I cross referenced the chapters through using the \label tag --> LaTeX is VERY similar to HTML and other mark up languages so you should see nothing new here!
-This section is quite formulaic. Briefly describe the structure of this document, enumerating what does each chapter and section stands for. For instance in this work in Chapter \ref{chap:background} the guidance in structuring the literature review is given. Chapter \ref{chap:problem} describes the main requirements for the problem definition and so on ...
+%This section is quite formulaic. Briefly describe the structure of this document, enumerating what does each chapter and section stands for. For instance in this work in Chapter \ref{chap:background} the guidance in structuring the literature review is given. Chapter \ref{chap:problem} describes the main requirements for the problem definition and so on ...
